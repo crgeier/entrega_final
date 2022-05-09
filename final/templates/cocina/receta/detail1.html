@@ -1,0 +1,20 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+
+<h1>Estas son las recetas:</h1>
+
+{% for receta in recetas %}
+
+    {{receta.name}}
+    {{receta.receta}}
+
+    
+    <img src="{{ receta.image.url }}" height="100px" >
+
+{% endfor %}
+
+
+{% endblock  %}

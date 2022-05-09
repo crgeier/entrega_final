@@ -1,0 +1,14 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+ 
+ 
+  <h4><p> {{ object.name }} </p></h4>
+  <h6>Ingredientes:</h6>
+  <p> {{ object.receta }} </p>
+  <h6>Tu plato quedará así!</h6>
+  <p> <img src=" {{object.image.url }}" > </p> 
+ 
+{% endblock  %}

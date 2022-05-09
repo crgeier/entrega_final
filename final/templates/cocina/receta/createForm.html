@@ -1,0 +1,18 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+<center>
+    
+    <title>Registrar empleados</title>
+    <h4>Registrar empleados</h4>
+    <form action = "" method= POST>
+      {% csrf_token %}
+      {{ form.as_table}}
+      <input type = 'submit' value = 'Enviar'>
+    </form>  
+
+
+</center>
+{% endblock  %}

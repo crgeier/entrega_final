@@ -1,0 +1,18 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+
+    
+<h2> Formulario - editar usuario </h2>
+<h3> De {{ user.first_name }} {{ user.last_name }} </h3>
+
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_table}}
+    <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock  %}

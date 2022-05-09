@@ -1,0 +1,19 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+<center>
+    {% if message %}
+        <h2> {{ message }} </h2>
+    {% endif %}
+    <form action = "" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form %}
+            <input type = "submit" value ="Iniciar Sesión"/>
+        {% endif %}
+    </form>   
+</center>
+
+{% endblock  %}

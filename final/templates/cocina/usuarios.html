@@ -1,0 +1,15 @@
+{% extends 'cocina/index.html' %}
+
+{% load static %}
+
+{% block content %} 
+<center>
+<h1> Página a las que se pueden acceder </h1>
+
+<p><h4><li class="list-inline-item"><a href="{% url 'cocina:login' %}">Login</a></li></h4></p>
+<p><h4><li class="list-inline-item"><a href="{% url 'cocina:edit' %}">Editar Usuario</a></li></h4></p>
+<p><h4><li class="list-inline-item"><a href="{% url 'cocina:register' %}">Registrar Usuario</a></li></h4></p>
+<p><h4><li class="list-inline-item"><a href="{% url 'cocina:logout' %}">Logout</a></li></h4></p>
+
+</center>
+{% endblock  %}

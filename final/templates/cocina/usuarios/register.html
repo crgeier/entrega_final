@@ -1,0 +1,20 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+
+    {% if message %}
+        <h2> {{ message }} </h2>
+    {% endif %}
+    <form action = "" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type = "submit" value ="Registrar nuevo usuario"/>
+          
+    </form>   
+
+    <p><h4><li class="list-inline-item"><a href="{% url 'cocina:login' %}">Login</a></li></h4></p>
+
+
+{% endblock  %}

@@ -1,0 +1,23 @@
+
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+
+<h1>Estas son las recetas:</h1>
+<h4><a href="{%url 'cocina:receta-new-form'%}"> Registrar nueva receta </a></h4>
+
+ {% for receta in recetas %}
+
+        <h2><p> {{ receta.name }} </p></h2>
+        {% comment %} <p> {{ receta.receta }} </p> {% endcomment %}
+        <p><img src="{{ receta.image.url }}" height="100px" > </p>
+        {% comment %} <img src="{{ image }}" > {% endcomment %}
+
+        <h5><p><a href="{%url 'cocina:receta-view-detail' receta.id%}"> Más detalle</a></p></h5>
+        <h5><p><a href="{%url 'cocina:receta-delete' receta.id%}"> Eliminar</a></p></h5>
+        <p><a href="{%url 'cocina:receta-update' receta.id%}"> Actualizar</a></p>
+ {% endfor %} 
+
+{% endblock  %}

@@ -1,0 +1,18 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+
+            {{ form.as_p }}
+
+        </table>        
+        <input type = "submit", value = "Enviar">
+    </form>        
+
+ 
+{% endblock  %}

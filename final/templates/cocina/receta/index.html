@@ -1,0 +1,13 @@
+{% extends 'cocina/index.html' %}
+ 
+{% load static %}
+ 
+{% block content %}
+ 
+<h1>Estas son las recetas:</h1>
+  {% for recetas in object_list%}
+  <p> {{recetas.name}}</p>
+  {%endfor%}
+ 
+ 
+{% endblock  %}
